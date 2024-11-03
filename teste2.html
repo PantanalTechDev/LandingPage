@@ -1,0 +1,105 @@
+<html></html>
+<head>
+    <title>MapGuav</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div>
+                    <header className="bg-white shadow-md">
+                        <div className="container mx-auto flex justify-between items-center py-4 px-6">
+                            <img src="https://placehold.co/50x50" alt="Logo" className="h-10 w-10"/>
+                            <nav className="space-x-4">
+                                <a href="#" className="text-gray-700">Home</a>
+                                <a href="#" className="text-gray-700">Sobre</a>
+                                <a href="#" className="text-gray-700">Contato</a>
+                            </nav>
+                            <div className="text-gray-700">
+                                <i className="fas fa-globe"></i>
+                            </div>
+                        </div>
+                    </header>
+
+                    <main>
+                        <section className="relative bg-green-500 text-white">
+                            <div className="container mx-auto flex flex-col md:flex-row items-center py-12 px-6">
+                                <div className="md:w-1/2">
+                                    <h1 className="text-4xl font-bold">MapGuav App</h1>
+                                    <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+                                    <button className="mt-6 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded">Saiba Mais</button>
+                                </div>
+                                <div className="md:w-1/2 mt-6 md:mt-0">
+                                    <img src="https://placehold.co/300x500" alt="App Image" className="rounded-lg shadow-lg"/>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="bg-green-200 py-12">
+                            <div className="container mx-auto flex flex-col md:flex-row items-center px-6">
+                                <div className="md:w-1/2">
+                                    <h2 className="text-3xl font-bold text-green-800">Projeto MapGuav</h2>
+                                    <p className="mt-4 text-green-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Proin sit amet felis nec erat sollicitudin varius.</p>
+                                    <button className="mt-6 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded">Saiba Mais</button>
+                                </div>
+                                <div className="md:w-1/2 mt-6 md:mt-0">
+                                    <img src="https://placehold.co/400x300" alt="Map Image" className="rounded-lg shadow-lg"/>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="bg-white py-12">
+                            <div className="container mx-auto px-6">
+                                <h2 className="text-3xl font-bold text-green-800">Conheça Guavida</h2>
+                                <div className="mt-6 flex flex-col md:flex-row items-center">
+                                    <div className="md:w-1/2">
+                                        <img src="https://placehold.co/400x300" alt="Guava Image" className="rounded-lg shadow-lg"/>
+                                    </div>
+                                    <div className="md:w-1/2 mt-6 md:mt-0">
+                                        <p className="text-green-700">A guavida é uma fruta deliciosa e saudável, rica em vitaminas e minerais. Ela é conhecida por seus benefícios à saúde, incluindo a melhora da digestão, fortalecimento do sistema imunológico e promoção da saúde da pele.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="bg-green-200 py-12">
+                            <div className="container mx-auto px-6">
+                                <h2 className="text-3xl font-bold text-green-800">Quem Somos</h2>
+                                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-green-800">Membro 1</h3>
+                                        <p className="mt-4 text-green-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-green-800">Membro 2</h3>
+                                        <p className="mt-4 text-green-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-green-800">Membro 3</h3>
+                                        <p className="mt-4 text-green-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+                                    </div>
+                                </div>
+                                <button className="mt-6 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded">Saiba Mais</button>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

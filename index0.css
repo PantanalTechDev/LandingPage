@@ -1,0 +1,740 @@
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .navbar {
+        background-color: rgba(138, 173, 75, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: none;
+        width: 100%;
+        max-height: 16vh;
+        padding: 1rem;
+    }
+    
+    .team div {
+        padding: 2rem;
+    }
+    
+    .row .botao:hover,
+    .botaovermapa:hover {
+        scale: 1.2;
+        background-color: #24a72c;
+    }
+    
+    .main {
+        flex: 1;
+        /* Organiza as divs uma abaixo da outra */
+        /* Espaço entre cada div */
+        width: 100%;
+        height: calc(100vh - 16vh);
+        padding: 0;
+        overflow: visible;
+        position: relative;
+    }
+    
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
+    
+    nav a {
+        margin: 0.5rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 1.35rem;
+    }
+    
+    nav span {
+        font-size: 2rem;
+    }
+    
+    nav li {
+        font-size: 1.5rem;
+    }
+    
+    .navbar a:hover {
+        color: #24a72c;
+    }
+    
+    .globe-icon {
+        height: 24px;
+        width: 24px;
+    }
+    
+    .hero {
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(138, 173, 75, 0.9)), url('bg-callout1.jpg');
+        color: white;
+        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+        overflow: visible;
+        /* Garante que todo o conteúdo seja visível */
+    }
+    
+    #guavirinhaimg {
+        width: 20rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    /* .box0 {
+    align-items: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    gap: 7rem;
+    padding: auto;
+}
+
+.box1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.box2 {
+    max-width: 100%;
+    max-height: 100%;
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+    
+    .box0 {
+        align-items: center;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        gap: 2rem;
+        /* Ajuste para não exagerar no espaçamento entre as caixas */
+        padding: 0 2rem;
+        /* Garantir que não extrapole a largura total */
+    }
+    
+    .box1,
+    .box2 {
+        flex: 1;
+        /* Cada um ocupa no máximo 50% da largura */
+        /* Limita a altura ao máximo permitido */
+        display: flex;
+        justify-content: flex-start;
+        /* Garante que os itens comecem do topo do contêiner */
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .row .lead {
+        font-size: 1.5rem;
+        color: #45cf63;
+        font-weight: bold;
+    }
+    
+    .row .botao {
+        font-size: 1.3rem;
+        background-color: #45cf63;
+        color: white;
+        width: 15rem;
+        font-weight: bold;
+        border-radius: 2rem;
+    }
+    
+    .mapa {
+        flex-grow: 1;
+        display: flex;
+        padding: 1rem;
+        max-height: 100%;
+    }
+    
+    .mapa img {
+        min-width: 100%;
+        border-radius: 1.3rem;
+        width: 100%;
+        height: 33vw;
+    }
+    
+    .guavirinha img,
+    .mapa img {
+        max-width: 100%;
+    }
+    
+    .guavirinha {
+        display: flex;
+    }
+    
+    .guavirinha img {
+        width: 33vw;
+    }
+    
+    .hero-content h1 {
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        font-size: clamp(3rem, 1vw + 1rem, 3rem);
+    }
+    
+    .hero-content p {
+        font-size: clamp(1rem, 1vw + 1rem, 3rem);
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: left;
+    }
+    
+    .hero-content {
+        position: relative;
+        top: 2.6svw;
+        animation: myAnim 1s ease 0s 1 normal forwards;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: 2rem;
+    }
+    
+    button {
+        background-color: #38a169;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 40px;
+    }
+    
+    .botaovermapa {
+        margin-top: -1rem;
+        width: 40%;
+        border-radius: 3rem;
+        font-size: 1.5rem;
+    }
+    
+    .nav-left,
+    .nav-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .nav-left {
+        left: 20px;
+    }
+    
+    .nav-right {
+        right: 20px;
+    }
+    
+    .project {
+        background: rgb(101, 125, 49);
+        background: linear-gradient(0deg, #657d31 0%, #2c4b2f 0%, #8aad4b 100%);
+        /*linear-gradient(to right, #2c4b2f 0%, #657d31 58%, #657d31 100%); */
+        /* background:  linear-gradient(0deg,  #9C981A 0%,  #E4EA66 100%); */
+        display: flex;
+        /* Habilita o Flexbox */
+        justify-content: space-between;
+        /* Espaço entre os itens */
+        align-items: center;
+        /* Centraliza verticalmente */
+        padding: 2rem;
+        color: rgba(233, 233, 8, 0.932);
+        overflow: visible;
+        /* Garante que todo o conteúdo seja visível */
+    }
+    
+    .project-content {
+        width: 75%;
+        padding: 1.5rem;
+        text-align: justify;
+        text-justify: inter-word;
+        color: #ffffffee;
+    }
+    
+    .project-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+    
+    .titulo-section {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #ffffffee;
+        text-justify: none;
+    }
+    
+    .titulo-section1 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.932);
+        text-justify: none;
+    }
+    
+    .texto-section1 {
+        margin-top: 1rem;
+        color: rgba(255, 255, 255, 0.932);
+    }
+    
+    .texto-section {
+        margin-top: 1rem;
+    }
+    
+    .bt-section {
+        margin-top: 1.5rem;
+        background-color: #38a169;
+        color: white;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 0.25rem;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .about {
+        background: rgb(44, 75, 47);
+        background: linear-gradient(0deg, #2c4b2f 0%, rgba(101, 125, 49, 1) 21%, rgba(87, 120, 60, 1) 71%, rgba(85, 118, 59, 1) 89%, rgba(44, 75, 47, 1) 100%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+    
+    .box-figura {
+        width: 100%;
+    }
+    
+    .about .about-image {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+    
+    .about-content {
+        width: 100%;
+        padding: 1.5rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .texto-section2 {
+        margin-top: 1rem;
+        color: #2f855a;
+    }
+    
+    .team {
+        background: rgb(138, 173, 75);
+        background: linear-gradient(0deg, rgba(138, 173, 75, 1) 52%, rgba(44, 75, 47, 1) 97%);
+        color: green;
+        text-align: center;
+    }
+    
+    .team .tiuloTeam {
+        color: #fff;
+    }
+    
+    .container-team {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    .logo-pantanal {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .logo-pantanal img {
+        width: 45vw;
+        min-width: 45vw;
+    }
+    
+    .descricao {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: white;
+        text-align: justify;
+    }
+    
+    footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        background-color: #8aad4b;
+        color: black;
+        text-align: center;
+        padding: 20px 0;
+        height: 15vh;
+    }
+    
+    footer p {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    @media (max-width: 680px) {
+        .project,
+        .about {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+        .project-content,
+        .about-content {
+            margin-right: 0;
+            padding-left: 0;
+        }
+        .project img,
+        .about img {
+            max-width: 100%;
+        }
+        .project-image {
+            margin-top: 20px;
+        }
+    }
+    
+    @media (max-width: 980px) {
+        .about,
+        .project {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .project-content {
+            width: 100%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .content {
+            max-width: 100%;
+        }
+        .project img,
+        .about img {
+            max-width: 100%;
+        }
+        .project-image {
+            margin-top: 20px;
+        }
+        .navbar {
+            max-height: 100%;
+        }
+        .logo-pantanal img {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .navbar-toggler {
+            text-align: left;
+        }
+        .navbar-collapse {
+            text-align: left;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .box0 {
+            flex-direction: column;
+            gap: 0;
+            position: static;
+        }
+        .box1 {
+            margin-top: -9rem;
+            width: 100%;
+            align-items: center;
+            /* Certifica que o conteúdo do box1 esteja centralizado */
+        }
+        .mapa {
+            display: none;
+        }
+        .botaovermapa {
+            margin-top: -5rem;
+            width: 30rem;
+            border-radius: 3rem;
+            font-size: 3rem;
+        }
+        .row {
+            flex-direction: column;
+        }
+        .row div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .row img {
+            width: 100%;
+        }
+        .row h2 {
+            text-align: center;
+            font-size: 4rem;
+        }
+        .row .lead {
+            font-size: 3rem;
+            color: #45cf63;
+            text-align: center;
+        }
+        .row .botao {
+            width: 100%;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .hero-content h1 {
+            text-align: center;
+            font-size: 4rem;
+        }
+        .hero-content p {
+            text-align: center;
+            font-size: 3rem;
+        }
+        .guavirinha img,
+        .mapa img {
+            max-width: 100%;
+            width: 50rem;
+            height: auto;
+            object-fit: fill;
+        }
+        #guavirinhaimg {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .guavirinha img {
+            width: 100%;
+        }
+        .hero-content {
+            top: 10svw;
+        }
+        .hero {
+            height: auto;
+            background-size: cover;
+            background-position: inherit;
+        }
+        .container-team {
+            flex-direction: column;
+        }
+        .navbar {}
+        .titulo-section,
+        .titulo-section1,
+        .tiuloTeam {
+            font-size: 5rem;
+        }
+        .texto-section {
+            font-size: 3rem;
+        }
+        .texto-section1 {
+            font-size: 3rem;
+        }
+        .bt-section {
+            font-size: 3rem;
+            width: 100%;
+            border-radius: 3rem;
+        }
+        .bt-section1 {
+            font-size: 3rem;
+            width: 100%;
+            border-radius: 3rem;
+        }
+        .titulo-descricao {
+            font-size: 5rem;
+        }
+        .texto-descricao {
+            font-size: 3rem;
+        }
+    }
+    
+    @media (max-width: 375px) {
+        .logo-pantanal img {
+            min-width: 85vw;
+        }
+    }
+    
+    .leFadeIn span {
+        animation-name: leFadeIn
+    }
+    
+    @keyframes leFadeIn {
+        from {
+            opacity: 0
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes inleft {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .animated-inleft {
+        animation: inleft 1.4s ease 0s 1 normal forwards;
+    }
+    
+    .animated-inRight {
+        animation: inRight 1s ease 0s 1 normal forwards;
+    }
+    
+    @keyframes inRight {
+        0% {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes inTop {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animated-intop {
+        animation: inTop 1.4s ease 0s 1 normal forwards;
+    }
+    
+    @keyframes myAnim {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .animate-scale {
+        animation: myAnim 2s ease 4s 2 normal forwards;
+    }
+    /* Define os botões de controle do carousel para se ajustarem ao tamanho do ícone */
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: auto;
+        /* Ajusta automaticamente ao conteúdo */
+        height: auto;
+        /* Ajusta automaticamente ao conteúdo */
+        padding: 0;
+        /* Remove qualquer padding para garantir que a área de clique seja apenas o ícone */
+        background: none;
+        /* Remove qualquer fundo */
+        border: none;
+        /* Remove qualquer borda */
+        outline: none;
+        /* Remove contorno */
+        display: flex;
+        /* Flexbox para centralizar o conteúdo */
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-content: center;
+        /* Centraliza horizontalmente */
+    }
+    /* Wrapper para os botões - centraliza a posição */
+    
+    .carousel-control-prev-wrapper,
+    .carousel-control-next-wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    
+    .carousel-control-prev-wrapper {
+        left: 10px;
+    }
+    
+    .carousel-control-next-wrapper {
+        right: 10px;
+    }
+    /* Ajuste dos botões */
+    
+    #carouselPrev,
+    #carouselNext {
+        background: none;
+        border: none;
+        padding: 0;
+        outline: none;
+        cursor: pointer;
+        width: 30px;
+        /* Limita a área do botão ao tamanho da seta */
+        height: 30px;
+        /* Limita a área do botão ao tamanho da seta */
+    }
+    /* Estilo das setas */
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: block;
+        width: 30px;
+        /* Ajuste conforme necessário */
+        height: 30px;
+        /* Ajuste conforme necessário */
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
